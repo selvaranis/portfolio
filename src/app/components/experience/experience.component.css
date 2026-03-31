@@ -1,0 +1,175 @@
+.experience-section {
+  width: 100%;
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* .section-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: 36px;
+  color: #cc3333;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #cc3333;
+  border-radius: 2px;
+} */
+
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.experience-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 5px solid #cc3333;
+  box-shadow: 0 4px 15px rgba(204, 51, 51, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideInUp 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.experience-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(204, 51, 51, 0.2);
+  border-left-color: #bb2222;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 20px;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.position {
+  font-family: "Fredoka Condensed", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 5px 0;
+}
+
+.company {
+  font-family: "Fredoka Condensed", sans-serif;
+  font-size: 14px;
+  color: #cc3333;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.duration {
+  font-family: "Fredoka Condensed", sans-serif;
+  font-size: 13px;
+  color: #999;
+  font-weight: 500;
+  white-space: nowrap;
+  background: rgba(204, 51, 51, 0.1);
+  padding: 5px 12px;
+  border-radius: 20px;
+}
+
+.description-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.description-item {
+  font-family: "Fredoka Condensed", sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 12px;
+  margin-left: 20px;
+  position: relative;
+  padding-left: 12px;
+}
+
+.description-item::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #cc3333;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.description-item strong {
+  font-weight: 700;
+  color: #000;
+  font-family: "Fredoka Condensed", sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .duration {
+    width: fit-content;
+  }
+
+  .experience-card {
+    padding: 20px;
+    border-left-width: 4px;
+  }
+
+  .position {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .experience-card {
+    padding: 15px;
+  }
+
+  .position {
+    font-size: 16px;
+  }
+
+  .company {
+    font-size: 12px;
+  }
+
+  .tech-badge {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+}

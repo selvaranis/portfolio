@@ -1,0 +1,59 @@
+<section class="about-section" [@slideInAnimation]>
+  <h2 class="section-title">About Me</h2>
+
+  <div class="about-container">
+    <!-- Introduction -->
+    <div class="about-card">
+      <h3 class="card-title">Who I Am</h3>
+      <p class="about-text">{{ aboutContent.introduction }}</p>
+    </div>
+
+    <!-- Experience Overview -->
+    <div class="about-card">
+      <h3 class="card-title">My Journey</h3>
+      <p class="about-text">{{ aboutContent.experience }}</p>
+    </div>
+
+    <!-- Expertise -->
+    <div class="about-card">
+      <h3 class="card-title">Core Expertise</h3>
+      <div class="expertise-list">
+        <div
+          *ngFor="let skill of aboutContent.expertise"
+          class="expertise-item"
+        >
+          <span class="expertise-icon">✓</span>
+          <span class="expertise-text">{{ skill }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interests -->
+    <div class="about-card">
+      <h3 class="card-title">What I'm Passionate About</h3>
+      <div class="interests-list">
+        <div
+          *ngFor="let interest of aboutContent.interests"
+          class="interest-item"
+        >
+          <span class="interest-icon">→</span>
+          <span class="interest-text">{{ interest }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Highlights -->
+    <div class="about-card highlight-card">
+      <h3 class="card-title">Key Achievements</h3>
+      <div class="highlights-list">
+        <div
+          *ngFor="let highlight of aboutContent.highlights"
+          class="highlight-item"
+        >
+          <span class="highlight-number">⭐</span>
+          <span class="highlight-text">{{ highlight }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

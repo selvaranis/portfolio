@@ -1,0 +1,18 @@
+<section class="education-section">
+  <h2 class="section-title">Education</h2>
+
+  <div class="timeline" [@listAnimation]="educationList">
+    <div *ngFor="let edu of educationList; let i = index" class="timeline-item">
+      <div class="education-card">
+        <div class="card-header">
+          <h3 class="degree">{{ edu.degree }}</h3>
+          <span class="duration">{{ edu.duration }}</span>
+        </div>
+
+        <p class="institution">{{ edu.institution }}</p>
+        <p class="field">{{ edu.field }}</p>
+        <p class="details">{{ edu.details }}</p>
+      </div>
+    </div>
+  </div>
+</section>

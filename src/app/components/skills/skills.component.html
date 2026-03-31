@@ -1,0 +1,22 @@
+<section class="skills-section">
+  <h2 class="section-title">Skills & Expertise</h2>
+
+  <div class="skills-container" [@skillAnimation]="skills">
+    <div class="skills-grid">
+      <div
+        *ngFor="let skill of skills"
+        class="skill-item"
+        [style.--skill-level]="skill.level + '%'"
+      >
+        <div class="skill-header">
+          <span class="skill-name">{{ skill.name }}</span>
+          <span class="skill-percentage">{{ skill.level }}%</span>
+        </div>
+
+        <div class="skill-bar-container">
+          <div class="skill-bar-fill"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
